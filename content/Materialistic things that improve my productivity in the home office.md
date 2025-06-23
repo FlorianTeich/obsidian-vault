@@ -13,6 +13,11 @@ I just switched from my beloved Keychron K8 Mechanical Keyboard to my first ergo
 
 This one is a big enabler, as I can easily switch from sitting to standing regularly during work. Sadly, my BEKANT model is not sold anymore by IKEA. One Problem I have with this table is that they cheaped out on the power supply: no grounding/protective contact.
 
+## Chair - Hermann Miller Aeron
+![](https://destore.hermanmiller.com/cdn/shop/products/01-Herman_Miller-Aeron-Mineral-Standard_2dd8bfcd-9e76-4b9c-b279-1c6888efa30e.jpg?height=1180&v=1661267563&width=960)
+
+I can really recommend this chair. 12 years of guarantee and a very comfortable.
+
 ## Mice - Logitech MX Vertical and Logitech Lift
 ![](https://resource.logitech.com/w_544,h_466,ar_7:6,c_pad,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-vertical/gallery/mx-vertical-gallery-02.png)
 
