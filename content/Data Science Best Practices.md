@@ -35,11 +35,18 @@ def test_dataframe_unique_rows(df):
 ```
 It's unrealistic to expect a supervised ML approach to achieve high performance if the set of identical samples with different labels is highly prevalent.
 
+### Quantify potential drift or leak from the get go
+
+If you work on a classification task, after you created your train and test splits, strip away their labels and set the train labels to 0 and test labels to 1. Then merge these two tables and do CrossValidation. If you can easily predict which samples the test samples are, chances are there might be some heavy drift.
+
 ### Synthetic data as support for tests
 If you work with sensible data: focus on producing synthetic data early on. There are great libraries for that. This way, you can kill two birds with one stone: model a Directed Acyclic Graph of how you think the data creation process happens and model the individual variable distributions. Then sample from this DAG your artificial data. Important: this artificial data helps identifying edge-cases in your software; it's not meant to train your final classifier on it.
 
 ### Big data
 If you work with a lot of data and you cannot satisfy the memory requirements of your in-memory dataframe library (pandas/polars), look at pyspark. It has a steep learning curve, but many of its concepts are not tied to pyspark itself but big-data processing, distributed systems and SQL in general.
+
+### Feature Importance Baseline
+Create an additional feature that is random and train a model. This might give you a baseline for which features are important (higher importance than the noise feature).
 
 ## Training Phase:
 
@@ -54,6 +61,12 @@ Depending on your algorithm, do not forget to start your preprocessing by normal
 	* Decision Trees, XGBoost: no scaling
 	* SVM, Logistic Regression, Ridge, Lasso, PCA: Z-score standardization
 	* ANN, KNN: Min-Max scaling or Z-score standardization
+
+### Model-based feature
+Concrete example from Puget, who trained a model to predict the objective house price in order to use this prediction to figure out how much the offer of an advertisement was above or below this market-price.
+
+### Denoising
+If your data is very noisy, a denoising autoencoder might help a lot.
 
 ### ML specific tests
 Write ML-specific test
@@ -156,6 +169,21 @@ assert torch.allclose(final_output, target), "Model did not overfit on the singl
 * overfitting on batch test
 
 ## Evaluation Phase:
+
+### Choose your champion wisely
+Do not blindly select your champion model by its validation split performance. If you are interested in a generalizing model, also consider the gap between train split performance and validation split performance.
+
+Example:
+
+(Higher performance values are better)
+
+| Model   | Train Performance | Validation Performance |
++---------+-------------------+------------------------+
+| Model A | 99.60             | 90.18                  |
+| Model B | 91.72             | 90.14                  |
+
+Selecting Model A as your final model would not be advisable here.
+
 
 ### Calibration
 Check the calibration of your model on the given data. If needed, recalibrate your model
