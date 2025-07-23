@@ -7,3 +7,4 @@ employees, salaries = dataset.X, dataset.y
 vectorizer = TableVectorizer()
 vectorized_employees = vectorizer.fit_transform(employees)
 vectorized_employees
+```

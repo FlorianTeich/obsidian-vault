@@ -6,3 +6,4 @@ import pygwalker as pyg
 data = load_wine(as_frame=True).frame
 walker = pyg.walk(data)
 walker
+```

@@ -66,3 +66,4 @@ for i in range(10):
 for layer, weights in model.named_parameters():
 	if torch.isnan(weights).any():
 		print(f"NaNs detected in {layer}")
+```

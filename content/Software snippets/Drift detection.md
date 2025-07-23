@@ -52,3 +52,4 @@ if result.p_value <= alpha:
 	print(f"Data drift detected at feature {feature_idx}")
 else:
 	print(f"No data drift detected at feature {feature_idx}")
+```

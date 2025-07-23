@@ -1,3 +1,4 @@
+```python
 import typer
 
 app = typer.Typer()
@@ -18,3 +19,4 @@ def goodbye(name: str, formal: bool = False):
 
 if __name__ == "__main__":
     app()
+```

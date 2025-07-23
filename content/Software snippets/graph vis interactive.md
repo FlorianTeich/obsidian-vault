@@ -1,3 +1,4 @@
+```python
 from yfiles_jupyter_graphs import GraphWidget
 
 w = GraphWidget()
@@ -16,3 +17,4 @@ w.edges = [
 w.directed = True
 
 display(w)
+```
