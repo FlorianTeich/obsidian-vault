@@ -1,3 +1,5 @@
+![](resources/model_graph.svg)
+
 ```python
 import torch
 from transformers import AutoTokenizer, utils
@@ -23,6 +25,7 @@ img = model_graph.visual_graph
 # Graphviz object to png:
 img.save("model_graph.gvz")
 img.render("model_graph", format="png", cleanup=True)
+img.render("model_graph", format="svg", cleanup=True)
 
 img = Image.open("model_graph.png")
 plt.imshow(img)

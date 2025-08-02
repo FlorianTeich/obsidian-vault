@@ -1,5 +1,7 @@
 Waffleplots are somehow missing from many plotting libraries, so here we go:
 
+![](resources/waffle_plot.png)
+
 ```python
 import numpy as np
 import plotly.graph_objects as go
@@ -17,6 +19,7 @@ def plot_waffle_plot(v=1, dims=(10,10)):
         xgap=1, ygap=1,
         colorscale=[[0.0, '#FFF7F3'],
                 [1.0, "#49006A"]],
+        showscale=False
     ))
     fig.update_layout(yaxis = dict(scaleanchor = 'x'))
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)')
