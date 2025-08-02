@@ -1,3 +1,6 @@
+![](resources/web_service.png)
+
+
 ```python
 from diagrams import Diagram
 from diagrams.aws.compute import EC2
