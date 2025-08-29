@@ -2,15 +2,15 @@ name: Build Quartz site on VPS and deploy to local web root
 
 on:
   push:
-    branches:  [ "main" ]
+    branches: ["main"]
 
 jobs:
   build-and-deploy:
-    runs-on: self-hosted  # This targets your VPS with the self-hosted runner
+    runs-on: self-hosted # This targets your VPS with the self-hosted runner
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch all history for git info
+          fetch-depth: 0 # Fetch all history for git info
 
       - uses: actions/setup-node@v4
         with:

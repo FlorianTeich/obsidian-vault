@@ -32,7 +32,7 @@ docker build -t myjenkins-blueocean:2.516.1-1 .
   --volume jenkins-data:/var/jenkins_home \
   --volume jenkins-docker-certs:/certs/client:ro \
   myjenkins-blueocean:2.516.1-1
-  
+
   docker run --name docker --rm \
   --detach \
   --privileged \

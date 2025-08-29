@@ -5,10 +5,10 @@ class SimpleModel(torch.nn.Module):
 	def __init__(self):
 		super(SimpleModel, self).__init__()
 		self.linear = torch.nn.Linear(10, 1)
-		
+
 	def forward(self, x):
 		return self.linear(x)
-		
+
 def test_model_output_permutation():
 	# Create a simple model
 	model = SimpleModel()

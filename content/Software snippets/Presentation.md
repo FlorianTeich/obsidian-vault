@@ -1,6 +1,7 @@
 I like to have a latex/lualatex/xelatex template at hand as
-* Github Copilot is able to generate new slides easily and
-* I can version control my presentations
+
+- Github Copilot is able to generate new slides easily and
+- I can version control my presentations
 
 ```latex
 \documentclass[usenames,dvipsnames,bigger]{beamer}
@@ -68,12 +69,12 @@ I like to have a latex/lualatex/xelatex template at hand as
 \end{frame}
 
 %----------------------------------------------
- 
+
 \begin{frame} \frametitle{\emoji{heart} Made with \LaTeX}
      \label{sec-2_0}
 
      This presentation was made with \LaTeX
-     
+
      \fbox{\includegraphics[height=4cm]{some_resource.png}}
 
      \begin{itemize}
@@ -81,7 +82,7 @@ I like to have a latex/lualatex/xelatex template at hand as
           \item Works great for Version Control with Git
           \item Easy to ingest/interpret for future AI systems (e.g. for summarization)
      \end{itemize}
-     
+
 \end{frame}
 
 %----------------------------------------------

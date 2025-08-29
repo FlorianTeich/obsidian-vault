@@ -5,7 +5,7 @@ Waffleplots are somehow missing from many plotting libraries, so here we go:
 ```python
 import numpy as np
 import plotly.graph_objects as go
- 
+
 def plot_waffle_plot(v=1, dims=(10,10)):
     """ Plot Waffle plot with dimensions of *dim* and value v
     Args:
@@ -26,6 +26,6 @@ def plot_waffle_plot(v=1, dims=(10,10)):
     fig.update_yaxes(showticklabels=False)
     fig.update_xaxes(showticklabels=False)
     fig.show()
- 
+
 plot_waffle_plot(13)
 ```

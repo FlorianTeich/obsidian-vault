@@ -34,3 +34,4 @@ class GatedBCEWithLogitsLoss(BCEWithLogitsLoss):
         if self.reduction == "sum":
             return results_per_sample[mask].sum()
         raise ValueError(f"Unknown reduction: {self.reduction}")
+```

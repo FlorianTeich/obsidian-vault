@@ -116,18 +116,20 @@ brew install dotenv-linter
 ```
 
 ## Others:
-* htop
-* nvtop, if gpu is available
-* openssh, if needed
-* kickstart
-* docker-cli or docker-desktop
-* minikube, if needed
-  * (kustomize)
-* task, if primary work/private workload
-* Ghostty, if access to UI
-* vs code, if access to UI
+
+- htop
+- nvtop, if gpu is available
+- openssh, if needed
+- kickstart
+- docker-cli or docker-desktop
+- minikube, if needed
+  - (kustomize)
+- task, if primary work/private workload
+- Ghostty, if access to UI
+- vs code, if access to UI
 
 ## vs code plugins:
+
 ```
 docker.docker
 github.copilot

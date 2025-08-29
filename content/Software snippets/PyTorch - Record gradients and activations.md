@@ -31,7 +31,7 @@ def train(iteration_number: int=0):
 	loss = criterion(output, torch.tensor(y_train))
 	loss.backward()
 	optimizer.step()
-	
+
 summary_writer = SummaryWriter(log_dir="tb_logs")
 
 # add hooks to model to get activations and gradients

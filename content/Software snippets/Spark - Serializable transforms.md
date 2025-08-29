@@ -9,7 +9,7 @@ from pyspark.ml import UnaryTransformer, Pipeline, Transformer, PipelineModel
 from pyspark.ml.feature import StringIndexer, VectorAssembler, OneHotEncoder, VectorSizeHint
 from pyspark.ml.functions import array_to_vector, vector_to_array
 from pyspark.ml.param.shared import HasInputCol, HasOutputCol, Param, Params, TypeConverters
-from pyspark.ml.util import DefaultParamsReadable, DefaultParamsWritable  
+from pyspark.ml.util import DefaultParamsReadable, DefaultParamsWritable
 from pyspark.sql.functions import udf
 
 
@@ -20,7 +20,7 @@ sentences = ["This is an example sentence", "Each sentence is converted"]
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 embeddings = model.encode(sentences)
 
-        
+
 class StringTransformer(
     Transformer,
     HasInputCol,
@@ -70,20 +70,20 @@ class StringTransformer(
         from pyspark.sql.functions import col, udf
         from pyspark.sql.types import StringType
         from sentence_transformers import SentenceTransformer
-        
+
         out_col = self.getOutputCol()
         in_col = self.getInputCol()
-        
+
         model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-    
+
         upperCaseUDF = udf(lambda x:model.encode(str(x), show_progress_bar=False).tolist(), ArrayType(FloatType()))
 
         return dataset.withColumn(
             out_col,
             upperCaseUDF(col(in_col)),
         )
-    
-        
+
+
 class ColumnCastTransformer(
         Transformer, HasInputCol, HasOutputCol,
         DefaultParamsReadable, DefaultParamsWritable):
@@ -172,7 +172,7 @@ train = spark.read.option("header", True).csv("spaceship-titanic/train.csv") \
             .withColumn("Transported", col("Transported").cast(BooleanType()))
 
 cct = ColumnCastTransformer()
-    
+
 homeplanetIndexer = StringIndexer(inputCol="HomePlanet", outputCol="HomePlanet_processed",
     stringOrderType="frequencyDesc", handleInvalid="keep")
 destinationIndexer = StringIndexer(inputCol="Destination", outputCol="Destination_processed",
@@ -204,7 +204,7 @@ vecAssembler.setInputCols(["Name_Processed_vec",
                            "VRDeck",
                           ])
 
-pipeline = Pipeline(stages=[cct, name_, cabin_, homeplanetIndexer, destinationIndexer, ohe_homeplanet, ohe_destination, 
+pipeline = Pipeline(stages=[cct, name_, cabin_, homeplanetIndexer, destinationIndexer, ohe_homeplanet, ohe_destination,
                             name_vec_, cabin_vec_, sizeHintName, sizeHintCabin, vecAssembler])
 #pipeline.fit(train).transform(train).show()
 
@@ -233,7 +233,7 @@ processed_test_df.write.parquet("test_data")
 
 #with mlflow.start_run():
 #    mlflow.spark.log_model(pipelineModel, artifact_path="pipeline")
-#    
+#
 #    !rm -rf /kaggle/working/train_data
 #    processed_train_df.write.parquet("train_data")
 #    mlflow.log_artifact("train_data", "train_data")
