@@ -45,9 +45,9 @@ Avoid train-test skew: Make sure to use the same preprocessing of your data duri
 
 ### Don't forget to scale your data
 Depending on your algorithm, do not forget to start your preprocessing by normalization. As a rule of thumb:
-	* Decision Trees, XGBoost: no scaling
-	* SVM, Logistic Regression, Ridge, Lasso, PCA: Z-score standardization
-	* ANN, KNN: Min-Max scaling or Z-score standardization
+* Decision Trees, XGBoost: no scaling
+* SVM, Logistic Regression, Ridge, Lasso, PCA: Z-score standardization
+* ANN, KNN: Min-Max scaling or Z-score standardization
 
 ### Model-based feature
 Concrete example from Puget, who trained a model to predict the objective house price in order to use this prediction to figure out how much the offer of an advertisement was above or below this market-price.
@@ -73,7 +73,7 @@ Example:
 (Higher performance values are better)
 
 | Model   | Train Performance | Validation Performance |
-+---------+-------------------+------------------------+
+|---------|------------------:|-----------------------:|
 | Model A | 99.60             | 90.18                  |
 | Model B | 91.72             | 90.14                  |
 
@@ -85,9 +85,9 @@ Check the calibration of your model on the given data. If needed, recalibrate yo
 
 ### Think in upper and lower bounds
 Think in upper or lower bounds. If anyone asks you what the minimum performance of your machine learning approach is, write a quick benchmark in three steps:
-	1. using a classifier that predicts randomly.
-	2. Then, add a probability prior based on the class distributions.
-	3. [[Software snippets/automl via pycaret.md | Some AutoML-Estimator (eg. using pycaret) ]]
+1. using a classifier that predicts randomly.
+2. Then, add a probability prior based on the class distributions.
+3. [[Software snippets/automl via pycaret.md | Some AutoML-Estimator (eg. using pycaret) ]]
 Quickly you will get a grasp of your performance floor and ceiling
 
 ## Deployment Phase:

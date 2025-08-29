@@ -115,7 +115,7 @@ brew install sqlfluff
 brew install dotenv-linter
 ```
 
-Still missing:
+## Others:
 * htop
 * nvtop, if gpu is available
 * openssh, if needed
@@ -127,7 +127,7 @@ Still missing:
 * Ghostty, if access to UI
 * vs code, if access to UI
 
-vs code plugins:
+## vs code plugins:
 ```
 docker.docker
 github.copilot
