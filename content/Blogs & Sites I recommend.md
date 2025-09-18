@@ -15,3 +15,6 @@
 
 - Category Theory Illustrated https://abuseofnotation.github.io/category-theory-illustrated/05_logic/
 - Explaining the Postgres Meme https://avestura.dev/blog/explaining-the-postgres-meme
+- The Pragmatic Programmer for ML https://ppml.dev/
+- Rules of ML https://developers.google.com/machine-learning/guides/rules-of-ml
+- The Deep Learning Tuning Playbook https://github.com/google-research/tuning_playbook

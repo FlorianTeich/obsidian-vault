@@ -1,8 +1,9 @@
 Looking at the activations and gradients of your model -especially their evolution over time - makes up for a good debugging tool.
 
-<iframe src="resources/model_activation.html" width="100%" height="500px"></iframe>
+![](resources/model_activations.png)
 
-<iframe src="resources/model_gradients.html" width="100%" height="500px"></iframe>
+![](resources/model_gradients.png)
+
 
 ```python
 import torch
