@@ -85,50 +85,10 @@ function formatFontSpecification(
   return spec.name
 }
 
-export function googleFontHref(theme: Theme) {
-  const { header, body, code } = theme.typography
-  const headerFont = formatFontSpecification("header", header)
-  const bodyFont = formatFontSpecification("body", body)
-  const codeFont = formatFontSpecification("code", code)
-
-  return `https://fonts.googleapis.com/css2?family=${headerFont}&family=${bodyFont}&family=${codeFont}&display=swap`
-}
-
-export function googleFontSubsetHref(theme: Theme, text: string) {
-  const title = theme.typography.title || theme.typography.header
-  const titleFont = formatFontSpecification("title", title)
-
-  return `https://fonts.googleapis.com/css2?family=${titleFont}&text=${encodeURIComponent(text)}&display=swap`
-}
-
 export interface GoogleFontFile {
   url: string
   filename: string
   extension: string
-}
-
-export async function processGoogleFonts(
-  stylesheet: string,
-  baseUrl: string,
-): Promise<{
-  processedStylesheet: string
-  fontFiles: GoogleFontFile[]
-}> {
-  const fontSourceRegex = /url\((https:\/\/fonts.gstatic.com\/s\/[^)]+\.(woff2|ttf))\)/g
-  const fontFiles: GoogleFontFile[] = []
-  let processedStylesheet = stylesheet
-
-  let match
-  while ((match = fontSourceRegex.exec(stylesheet)) !== null) {
-    const url = match[1]
-    const [filename, extension] = url.split("/").pop()!.split(".")
-    const staticUrl = `https://${baseUrl}/static/fonts/${filename}.${extension}`
-
-    processedStylesheet = processedStylesheet.replace(url, staticUrl)
-    fontFiles.push({ url, filename, extension })
-  }
-
-  return { processedStylesheet, fontFiles }
 }
 
 export function joinStyles(theme: Theme, ...stylesheet: string[]) {

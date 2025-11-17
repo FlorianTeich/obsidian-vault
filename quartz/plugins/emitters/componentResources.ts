@@ -10,10 +10,7 @@ import popoverStyle from "../../components/styles/popover.scss"
 import { BuildCtx } from "../../util/ctx"
 import { QuartzComponent } from "../../components/types"
 import {
-  googleFontHref,
-  googleFontSubsetHref,
   joinStyles,
-  processGoogleFonts,
 } from "../../util/theme"
 import { Features, transform } from "lightningcss"
 import { transform as transpile } from "esbuild"
@@ -233,45 +230,6 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
       let googleFontsStyleSheet = ""
       if (cfg.theme.fontOrigin === "local") {
         // let the user do it themselves in css
-      } else if (cfg.theme.fontOrigin === "googleFonts" && !cfg.theme.cdnCaching) {
-        // when cdnCaching is true, we link to google fonts in Head.tsx
-        const theme = ctx.cfg.configuration.theme
-        const response = await fetch(googleFontHref(theme))
-        googleFontsStyleSheet = await response.text()
-
-        if (theme.typography.title) {
-          const title = ctx.cfg.configuration.pageTitle
-          const response = await fetch(googleFontSubsetHref(theme, title))
-          googleFontsStyleSheet += `\n${await response.text()}`
-        }
-
-        if (!cfg.baseUrl) {
-          throw new Error(
-            "baseUrl must be defined when using Google Fonts without cfg.theme.cdnCaching",
-          )
-        }
-
-        const { processedStylesheet, fontFiles } = await processGoogleFonts(
-          googleFontsStyleSheet,
-          cfg.baseUrl,
-        )
-        googleFontsStyleSheet = processedStylesheet
-
-        // Download and save font files
-        for (const fontFile of fontFiles) {
-          const res = await fetch(fontFile.url)
-          if (!res.ok) {
-            throw new Error(`Failed to fetch font ${fontFile.filename}`)
-          }
-
-          const buf = await res.arrayBuffer()
-          yield write({
-            ctx,
-            slug: joinSegments("static", "fonts", fontFile.filename) as FullSlug,
-            ext: `.${fontFile.extension}`,
-            content: Buffer.from(buf),
-          })
-        }
       }
 
       // important that this goes *after* component scripts
