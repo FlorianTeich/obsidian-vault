@@ -5,7 +5,7 @@ from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from frouros.detectors.data_drift import KSTest
-rom frouros.detectors.data_drift import ChiSquareTest
+from frouros.detectors.data_drift import ChiSquareTest
 
 print("Use ChiSquare for categorical data, KS for numerical")
 np.random.seed(seed=31)
