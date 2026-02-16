@@ -10,6 +10,8 @@ Technical Literature
   - I have never read a book with such a convincing narrative. Every chapter contains some real world problems and the reader learns a lot of background information about many different disciplines (epistemology, philosophy, science,...)
 - **Kimball: The Data Warehouse Toolkit - The definitive guide to dimensional modeling**
   - Many engaging realistic scenarios that are used to illustrate the concepts of the individual chapters.
+- **The Pragmatic Programmer**
+  - Hands down the best book I read on Programming as it perfectly captures the ultimate goals of Software and lists many helpful ways to achieve them. Also, I like the strategic aspect in the beginning of convincing other peoples of your desired approach ("stone soup" etc...).
 - Some O'Reilly Picks:
   - **Kubeflow for Machine Learning - From Lab to Production**
   - **Data Algorithms with Spark**
