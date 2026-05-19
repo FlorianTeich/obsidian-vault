@@ -39,3 +39,7 @@ The Blue Yeti. Due to this paper https://journals.sagepub.com/doi/abs/10.1177/10
 ![](https://m.media-amazon.com/images/I/612u463P8LL.jpg)
 
 The Bose QuietComfort 35 II. Its important to me that I can use my headset via cable or via bluetooth. Most of the time I use it via cable. I have not done any objective experiment on this but I have the impression that I can perceive the latency that bluetooth adds. Sometimes, conversations in Teams calls feel very unnatural as the bluetooth devices of the participants add **friction** so to say. And everyone who has experienced it as well can attest that there are only few things that feel worse than input lag. And that is exactly it: input lag.
+
+## Webcam - Sony Alpha 37
+![](https://im.chip.de/ii/8/8/9/3/9/2/2/9/ir_engine.pl-05345aac85c5f884.jpg?im=AspectCrop%2Csize%3D%281%2C1%29%2Cgravity%3DCenter%3BResize%3D%281200%2C1200%29%2Caspect%3Dfit%3BBackgroundColor%2Ccolor%3Dffffff&hash=176104d44cec32e73dfeaa8e921e3d1a57a3423a19edd4563186caf9cebb045e)
+I use my Sony Alpha 37 as a webcam. I have a capture card that connects the camera to my computer via USB and I can use it as a webcam. The image quality is really good, compared to simple webcams.
