@@ -10,6 +10,8 @@
 - Wikipedia https://www.wikipedia.org/
 - Stanford Encyclopedia of Philosophy https://plato.stanford.edu/index.html
 - Aristotl.io https://www.aristotl.io/
+- Laws of Software Engineering https://lawsofsoftwareengineering.com
+- Laws of UX https://lawsofux.com
 
 ## Explanations
 
