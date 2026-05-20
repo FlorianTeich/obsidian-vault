@@ -18,6 +18,8 @@ Technical Literature
 
 Other Literature
 
+- **The mythical man month**
+- **The phoenix project**
 - **Josh Waitzkin: The Art of Learning**
 - **Daniel Kahneman: Thinking, Fast and Slow**
 - **Philippa Perry: The Book You Wish Your Parents Had Read (and Your Children Will Be Glad That You Did)**

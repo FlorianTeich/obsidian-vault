@@ -13,6 +13,15 @@
 - Laws of Software Engineering https://lawsofsoftwareengineering.com
 - Laws of UX https://lawsofux.com
 
+## Good Practices:
+
+- Tiger Style https://tigerstyle.dev
+- Parse, Dont Validate https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate
+
+## Good Blogs:
+
+- Joel on software https://www.joelonsoftware.com/
+
 ## Explanations
 
 - Category Theory Illustrated https://abuseofnotation.github.io/category-theory-illustrated/05_logic/
