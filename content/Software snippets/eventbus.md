@@ -1,3 +1,4 @@
+```python
 from __future__ import annotations
 
 import functools
@@ -109,3 +110,4 @@ if __name__ == "__main__":
 
     result = place_order(42, "keyboard")
     print(result)
+```
