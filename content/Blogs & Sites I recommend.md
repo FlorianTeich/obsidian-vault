@@ -12,15 +12,24 @@
 - Aristotl.io https://www.aristotl.io/
 - Laws of Software Engineering https://lawsofsoftwareengineering.com
 - Laws of UX https://lawsofux.com
+- How Query Engines Work https://howqueryengineswork.com/00-introduction.html
 
 ## Good Practices:
 
 - Tiger Style https://tigerstyle.dev
 - Parse, Dont Validate https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate
+- Simple made easy - Rich Hickey (2011) https://www.youtube.com/watch?v=SxdOUGdseq4
+- The Grug brained Developer https://grugbrain.dev/
+- Google Testing Blog https://testing.googleblog.com/
+- The missing Semester in Your CS education https://missing.csail.mit.edu/
+- Eskil Steenberg - Architecting LARGE Software Projects https://www.youtube.com/watch?v=sSpULGNHyoI
+- Avoid UUIDv4 Primary Keys (for Postgres) https://andyatkinson.com/avoid-uuid-version-4-primary-keys
+- The git commands i run before reading any Code https://piechowski.io/post/git-commands-before-reading-code/
 
 ## Good Blogs:
 
 - Joel on software https://www.joelonsoftware.com/
+- Airflow's Problem https://stkbailey.substack.com/p/airflows-problem
 
 ## Explanations
 
@@ -29,3 +38,4 @@
 - The Pragmatic Programmer for ML https://ppml.dev/
 - Rules of ML https://developers.google.com/machine-learning/guides/rules-of-ml
 - The Deep Learning Tuning Playbook https://github.com/google-research/tuning_playbook
+
