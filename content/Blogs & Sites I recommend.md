@@ -19,6 +19,8 @@
 - Tiger Style https://tigerstyle.dev
 - Parse, Dont Validate https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate
 - Simple made easy - Rich Hickey (2011) https://www.youtube.com/watch?v=SxdOUGdseq4
+- Functional Core, Imperative Shell https://functional-architecture.org/functional_core_imperative_shell/
+- The 12-factor app https://12factor.net/
 - The Grug brained Developer https://grugbrain.dev/
 - Google Testing Blog https://testing.googleblog.com/
 - The missing Semester in Your CS education https://missing.csail.mit.edu/
