@@ -112,7 +112,8 @@ if __name__ == "__main__":
     print(result)
 ```
 
-## Alternative:
+## Alternative
+
 ```python
 from __future__ import annotations
 

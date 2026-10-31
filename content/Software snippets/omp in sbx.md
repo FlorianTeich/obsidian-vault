@@ -3,10 +3,12 @@
 In order to run oh-my-pi inside a Docker Sandbox VM: use this kit & template.
 
 On top, it
+
 * allows accessing localhost:11434 (for local llm access via Ollama)
 * allows accessing python and npm urls
 
 `sbx-kit/spec.yaml`
+
 ```yaml
 schemaVersion: "1"
 kind: sandbox
@@ -50,6 +52,7 @@ agentContext: |
 ```
 
 `Dockerfile`
+
 ```sbx-kit/Dockerfile
 # syntax=docker/dockerfile:1.7
 FROM docker/sandbox-templates:shell-nightly
@@ -102,6 +105,7 @@ LABEL com.docker.sandboxes.flavor="omp"
 ```
 
 `sbx-kit/omp-init.sh`
+
 ```sh
 #!/usr/bin/env bash
 set -euo pipefail
@@ -111,6 +115,7 @@ exec omp "$@"
 ```
 
 build.sh
+
 ```sh
 #!/usr/bin/env bash
 set -euo pipefail
@@ -164,6 +169,7 @@ echo "  OMP_VERSION=<version> ./build.sh"
 ```
 
 `README.md`
+
 ```md
 # omp-sbx
 
@@ -176,6 +182,7 @@ Minimal Docker `sbx` wrapper for [Oh My Pi](https://github.com/can1357/oh-my-pi)
 ```
 
 The build script:
+
 1. builds the custom `omp-sbx:latest` image,
 2. saves it as a Docker image archive,
 3. loads the archive into `sbx`,
@@ -212,4 +219,5 @@ The kit expects the host's `~/.omp` to be available as an sbx workspace mount an
 Do not mount host credential stores unless you explicitly want the agent to have those credentials. The supplied network policy is intentionally limited to common model/package/GitHub endpoints; add domains only when needed.
 
 `sbx` supplies the actual isolation boundary. Avoid adding Docker privileges, host sockets, `NET_ADMIN`, or broad host mounts to this kit.
+
 ```

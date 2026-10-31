@@ -107,6 +107,7 @@ do_work(1, 2)
 ```
 
 ## docker-compose.yaml
+
 ```yaml
 services:
   otel-collector:
@@ -129,6 +130,7 @@ services:
 ```
 
 ## otel-collector-config.yaml (Config file)
+
 ```yaml
 receivers:
   otlp:

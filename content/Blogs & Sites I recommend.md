@@ -1,9 +1,9 @@
-## Tutorials:
+## Tutorials
 
 - Ray Tracing in one Weekend https://raytracing.github.io/books/RayTracingInOneWeekend.html
 - Cookie Cutter Data Science https://cookiecutter-data-science.drivendata.org/
 
-## Wikis/Glossaries:
+## Wikis/Glossaries
 
 - GPU Glossary https://modal.com/gpu-glossary
 - RationalWiki https://rationalwiki.org/wiki/Main_Page
@@ -14,7 +14,7 @@
 - Laws of UX https://lawsofux.com
 - How Query Engines Work https://howqueryengineswork.com/00-introduction.html
 
-## Good Practices:
+## Good Practices
 
 - Tiger Style https://tigerstyle.dev
 - Parse, Dont Validate https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate
@@ -28,7 +28,7 @@
 - Avoid UUIDv4 Primary Keys (for Postgres) https://andyatkinson.com/avoid-uuid-version-4-primary-keys
 - The git commands i run before reading any Code https://piechowski.io/post/git-commands-before-reading-code/
 
-## Good Blogs:
+## Good Blogs
 
 - Joel on software https://www.joelonsoftware.com/
 - Airflow's Problem https://stkbailey.substack.com/p/airflows-problem
@@ -40,4 +40,3 @@
 - The Pragmatic Programmer for ML https://ppml.dev/
 - Rules of ML https://developers.google.com/machine-learning/guides/rules-of-ml
 - The Deep Learning Tuning Playbook https://github.com/google-research/tuning_playbook
-

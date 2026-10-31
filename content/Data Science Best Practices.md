@@ -1,4 +1,4 @@
-## Problem Understanding Phase:
+## Problem Understanding Phase
 
 ### Right tool for the task
 
@@ -7,10 +7,10 @@ First look into the problem at hand before locking an ML approach in. Way too of
 ### Business value function
 
 Early on in your project, try to create the business value function you want to optimize. It will be suboptimal if you only go for accuracy or f1 score or any other metric if the company/customer could provide you with details like:
-_ how much does a misclassification cost the company?
+_how much does a misclassification cost the company?
 _ how much does the company benefit from a correct classification? \* probabl_ai has many videos on this procedure (https://www.youtube.com/@probabl_ai)
 
-## EDA Phase:
+## EDA Phase
 
 ### Put shared code into scripts, not Notebooks
 
@@ -42,7 +42,7 @@ If you work with a lot of data and you cannot satisfy the memory requirements of
 
 Create an additional feature that is random and train a model. This might give you a baseline for which features are important (higher importance than the noise feature).
 
-## Training Phase:
+## Training Phase
 
 ### Split by time, not arbitrarily to avoid future leaks
 
@@ -78,7 +78,7 @@ Write ML-specific test
 - [[Software snippets/PyTorch - Overfitting on Sample test.md | overfitting on sample test]]
 - overfitting on batch test
 
-## Evaluation Phase:
+## Evaluation Phase
 
 ### Choose your champion wisely
 
@@ -108,7 +108,7 @@ Think in upper or lower bounds. If anyone asks you what the minimum performance 
 3. [[Software snippets/automl via pycaret.md | Some AutoML-Estimator (eg. using pycaret)]]
    Quickly you will get a grasp of your performance floor and ceiling
 
-## Deployment Phase:
+## Deployment Phase
 
 ### Monitoring
 

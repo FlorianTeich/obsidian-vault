@@ -4,7 +4,6 @@ Looking at the activations and gradients of your model -especially their evoluti
 
 ![](resources/model_gradients.png)
 
-
 ```python
 import torch
 from torch import nn

@@ -115,49 +115,15 @@ brew install sqlfluff
 brew install dotenv-linter
 ```
 
-## Others:
+## Others
 
 - htop
 - nvtop, if gpu is available
 - openssh, if needed
 - kickstart
-- docker-cli or docker-desktop
-- minikube, if needed
+- podman
+- k3s, if needed
   - (kustomize)
 - task, if primary work/private workload
 - Ghostty, if access to UI
 - vs code, if access to UI
-
-## vs code plugins:
-
-```
-docker.docker
-github.copilot
-github.copilot-chat
-mermaidchart.vscode-mermaid-chart
-mongodb.mongodb-vscode
-ms-azuretools.vscode-containers
-ms-dotnettools.csdevkit
-ms-dotnettools.csharp
-ms-dotnettools.vscode-dotnet-runtime
-ms-kubernetes-tools.vscode-kubernetes-tools
-ms-ossdata.vscode-pgsql
-ms-python.debugpy
-ms-python.python
-ms-python.vscode-pylance
-ms-python.vscode-python-envs
-ms-toolsai.jupyter
-ms-toolsai.jupyter-keymap
-ms-toolsai.jupyter-renderers
-ms-toolsai.vscode-jupyter-cell-tags
-ms-toolsai.vscode-jupyter-slideshow
-ms-vscode-remote.remote-containers
-ms-vscode.cmake-tools
-ms-vscode.cpptools
-ms-vscode.cpptools-extension-pack
-ms-vscode.cpptools-themes
-perkovec.emoji
-redhat.vscode-yaml
-tomoki1207.pdf
-vstirbu.vscode-mermaid-preview
-```
