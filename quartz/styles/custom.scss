@@ -1,3 +1,21 @@
-@use "./base.scss";
+@use "./variables.scss" as *;
+
+@font-face {
+  font-family: "Schibsted Grotesk";
+  src: url("/static/SchibstedGrotesk-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("/static/SourceSans3-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/static/IBMPlexMono-Regular.ttf") format("truetype");
+  font-display: swap;
+}
 
 // put your custom CSS here!
