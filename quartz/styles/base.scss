@@ -9,10 +9,13 @@ html {
   text-size-adjust: none;
   overflow-x: hidden;
   width: 100vw;
+
+  @media all and ($mobile) {
+    scroll-padding-top: 4rem;
+  }
 }
 
-body,
-section {
+body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--light);
@@ -40,23 +43,17 @@ li,
 ol,
 ul,
 .katex,
-.math {
+.math,
+.typst-doc,
+g[class~="typst-text"] {
   color: var(--darkgray);
   fill: var(--darkgray);
-  hyphens: auto;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
 }
 
-p,
-ul,
-text,
-a,
-li,
-ol,
-ul,
-.katex,
-.math {
-  overflow-wrap: anywhere;
-  /* tr and td removed from list of selectors for overflow-wrap, allowing them to use default 'normal' property value */
+path[class~="typst-shape"] {
+  stroke: var(--darkgray);
 }
 
 .math {
@@ -91,7 +88,7 @@ a {
   color: var(--secondary);
 
   &:hover {
-    color: var(--tertiary) !important;
+    color: var(--tertiary);
   }
 
   &.internal {
@@ -100,6 +97,15 @@ a {
     padding: 0 0.1rem;
     border-radius: 5px;
     line-height: 1.4rem;
+
+    &.broken {
+      color: var(--secondary);
+      opacity: 0.5;
+      transition: opacity 0.2s ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
 
     &:has(> img) {
       background-color: transparent;
@@ -123,17 +129,33 @@ a {
   }
 }
 
+.flex-component {
+  display: flex;
+}
+
 .desktop-only {
-  display: initial;
+  display: contents;
+  &.flex-component {
+    display: flex;
+  }
   @media all and ($mobile) {
+    &.flex-component {
+      display: none;
+    }
     display: none;
   }
 }
 
 .mobile-only {
   display: none;
+  &.flex-component {
+    display: none;
+  }
   @media all and ($mobile) {
-    display: initial;
+    &.flex-component {
+      display: flex;
+    }
+    display: contents;
   }
 }
 
@@ -197,7 +219,7 @@ a {
     }
 
     & .sidebar {
-      gap: 2rem;
+      gap: 1.2rem;
       top: 0;
       box-sizing: border-box;
       padding: $topSpacing 2rem 2rem 2rem;
@@ -284,6 +306,48 @@ a {
     & footer {
       margin-left: 0;
     }
+  }
+}
+
+// ============================================================================
+// Page Frame Overrides
+// ============================================================================
+
+// Full-width frame: no sidebars, center content spans full width
+.page[data-frame="full-width"] > #quartz-body {
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "grid-header"
+    "grid-center"
+    "grid-footer";
+
+  @media all and ($tablet) {
+    grid-template-columns: auto;
+  }
+
+  & .center.full-width {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+// Minimal frame: no sidebars, no header/footer chrome, body content only + footer
+.page[data-frame="minimal"] > #quartz-body {
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "grid-center"
+    "grid-footer";
+
+  @media all and ($tablet) {
+    grid-template-columns: auto;
+  }
+
+  & .center.minimal {
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0;
   }
 }
 
@@ -484,6 +548,7 @@ code {
   font-size: 0.9em;
   color: var(--dark);
   font-family: var(--codeFont);
+  font-variant-ligatures: none;
   border-radius: 5px;
   padding: 0.1rem 0.2rem;
   background: var(--lightgray);
@@ -594,6 +659,7 @@ ol.overflow {
 }
 
 .katex-display {
+  display: initial;
   overflow-x: auto;
   overflow-y: hidden;
 }
